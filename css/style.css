@@ -72,7 +72,7 @@ body {
 }
 
 #contact .form-control {
-  background-color: cornsilk;
+  background-color: rgba(255, 248, 220, 0.578);
   border: 2px solid #e0e0e0;
   border-radius: 18px;
   font-size: 18px;
@@ -124,7 +124,7 @@ body {
 }
 
 #feedback .form-control {
-  background-color: cornsilk;
+  background-color: rgba(255, 248, 220, 0.578);
   border: 2px solid #e0e0e0;
   border-radius: 18px;
   font-size: 18px;
@@ -214,7 +214,10 @@ html {
 
 .home-thumb h1 {
   font-size: 60px;
-  color: #d8aa03;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ff793b, #fffb07 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 .home-thumb h3 {
@@ -228,7 +231,7 @@ html {
   color: black;
   padding: 10px 20px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 30px;
   display: inline-flex;
   align-items: center;
 }
@@ -264,7 +267,8 @@ html {
 }
 /* Back to Top Button */
 .scrollToTopBtn {
-  background-color: #3a63e4;
+  /* background-color: #FFE70F; */
+  background-image: radial-gradient(#f3bf8c,#ee7f10);
   color: #fff;
   text-align: center;
   width: 50px;
@@ -577,6 +581,15 @@ body.dark-mode .accordion button:focus {
   background-image: linear-gradient(to right, #bebcbc 0%, #f5f2f2 100%); 
 }
 
+body.dark-mode .accordion .accordion-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+  margin: 20px 0;
+}
+
+
+
 body.dark-mode .accordion-content{
   background: #003973; 
 background: -webkit-linear-gradient(to right, #E5E5BE, #003973);  
@@ -635,24 +648,24 @@ h2 {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 60rem;
 }
-.accordion-content,
-.accordion button {
-  background-image: linear-gradient(to right, #f3f1f2 0%, #fee140 100%);
+
+.accordion {
+  width: 100%;
 }
 
 .accordion .accordion-item {
-  border-bottom: 2px solid black;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin: 10px 0;
   font-weight: 700;
   transition: border-bottom 0.3s ease;
+  border-radius: 10px;
 }
 
-/* Active Accordion Item */
-.accordion .accordion-item button[aria-expanded="true"] {
-  border-bottom: 3px solid black;
-  background-image: linear-gradient(to right, #f3f1f2 0%, #fee140 100%);
+.accordion-item span{
+  border-radius: 10px;
 }
 
 /* Accordion Button */
@@ -674,16 +687,10 @@ h2 {
 /* Hover and Focus States */
 .accordion button:hover,
 .accordion button:focus {
-  color: #007bff;
-  background-image: linear-gradient(to right, #f3f1f2 0%, #efe18f 100%);
+  color: blue;
+  background-image: linear-gradient(to right, #f5bf40a9 0%,#f2d79acd 80%,#f5be40cd 100%);
+  border-radius: 12px;
   cursor: pointer;
-}
-
-/* Accordion Title */
-.accordion button .accordion-title {
-  padding: 1em 1.5em 1em 0;
-  font-weight: 700;
-  font-size: 1.1rem;
 }
 
 /* Icon Styling */
@@ -691,46 +698,15 @@ h2 {
   display: inline-block;
   position: absolute;
   top: 50%;
-  left: 95%;
-  width: 22px;
-  height: 22px;
-  border: 1px solid;
-  border-radius: 50%;
+  right: 1rem;
   transform: translateY(-50%);
+  font-size: 1.5rem;
   transition: transform 0.3s ease;
 }
 
-/* Icon Before (Horizontal Line) */
-.accordion button .icon::before {
-  display: block;
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 2px;
-  background: currentColor;
-  transform: translate(-50%, -50%);
-}
-
-/* Icon After (Vertical Line) */
-.accordion button .icon::after {
-  display: block;
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  width: 2px;
-  height: 10px;
-  background: currentColor;
-  transform: translate(-50%, -50%);
-}
-
+/* Expanded State */
 .accordion button[aria-expanded="true"] .icon {
-  transform: translateY(-50%) rotate(180deg);
-}
-.accordion button[aria-expanded="true"] .icon::after {
-  width: 0;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .accordion button[aria-expanded="true"] + .accordion-content {
@@ -746,43 +722,24 @@ h2 {
   overflow: hidden;
   transition: opacity 200ms linear, max-height 200ms linear;
   will-change: opacity, max-height;
-  background-color: #f9f9f9;
   padding: 0 1.5em;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+<<<<<<< HEAD
+  margin: 10px 0;
+  border-radius: 10px;
+=======
   border-bottom: 2px solid black;
+>>>>>>> f7ad5e177cebb1da0a2605ce3ba5bc533f65cf54
 }
 
 .accordion .accordion-content p {
-  font-size: 14px;
-  opacity: 0.8;
+  font-size: 1rem;
   line-height: 1.5;
   color: black;
   margin: 20px 0;
 }
 
-.accordion button .icon::before,
-.accordion button .icon::after {
-  transition: background 0.3s ease;
-}
-
-.accordion button:hover .icon::before,
-.accordion button:hover .icon::after {
-  background: #007bff;
-}
-
-.accordion button:focus .icon::before,
-.accordion button:focus .icon::after {
-  background: #0056b3;
-}
-
 /* Styles for larger screens */
 @media (min-width: 768px) {
-  .containerr {
-    width: 60rem;
-    padding: 2rem;
-  }
-
   .faqq {
     padding: 2rem;
   }
@@ -799,12 +756,8 @@ h2 {
     font-size: 1.15rem;
   }
 
-  .accordion button .accordion-title {
-    font-size: 1.3rem;
-  }
-
   .accordion .accordion-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -847,6 +800,7 @@ a:hover .fab {
   padding: 0 2rem;
 }
 .company h1 {
+  color: #fff;
   font-size: 14px;
 }
 .social {
@@ -981,6 +935,96 @@ a:hover .fab {
 }
 
 /********** Responsive Design ********/
+/* Small screens */
+@media (max-width: 576px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .col-md-offset-2,
+  .col-md-8,
+  .col-sm-12,
+  .col-md-6,
+  .col-sm-6,
+  .col-md-12,
+  .col-sm-12 {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .col-md-offset-3,
+  .col-sm-offset-2 {
+    margin: 0;
+  }
+
+  .section-title h1 {
+    font-size: 22px;
+  }
+
+  .section-title p {
+    font-size: 14px;
+  }
+
+  .rating label {
+    font-size: 24px;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 577px) and (max-width: 768px) {
+  .form-container {
+    padding: 25px;
+  }
+
+  .col-md-offset-2,
+  .col-md-8,
+  .col-sm-12 {
+    padding: 0 10px;
+  }
+
+  .col-md-offset-3,
+  .col-sm-offset-2 {
+    margin: 0;
+  }
+
+  .section-title h1 {
+    font-size: 23px;
+  }
+
+  .section-title p {
+    font-size: 15px;
+  }
+
+  .rating label {
+    font-size: 28px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 769px) {
+  .form-container {
+    padding: 30px;
+  }
+
+  .col-md-offset-2,
+  .col-md-8,
+  .col-sm-12 {
+    padding: 0 15px;
+  }
+
+  .section-title h1 {
+    font-size: 24px;
+  }
+
+  .section-title p {
+    font-size: 16px;
+  }
+
+  .rating label {
+    font-size: 30px;
+  }
+}
 @media (max-width: 900px) {
   .row {
     flex-direction: column;
@@ -1071,6 +1115,7 @@ footer hr {
   color: #0078d4;
   /* Hover color in dark mode */
 }
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -1295,6 +1340,7 @@ footer {
 
 .section-title h1 {
   padding-bottom: 10px;
+  font-weight: 900;
 }
 
 .section-title {
@@ -1308,6 +1354,116 @@ div.card {
   width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
+}
+/* discord Button Styling */
+.btn-custom 
+{
+  background: linear-gradient(135deg, #7289da, #5865f2);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Icon Styling */
+.btn-custom .discord-icon 
+{
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effects */
+.btn-custom:hover 
+{
+  background: black;
+  color: yellow;
+  border-color: yellow;
+  box-shadow: 0 8px 20px rgba(255, 255, 0, 0.6);
+  transform: scale(1.1);
+}
+
+.btn-custom:hover .discord-icon 
+{
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* Active State */
+.btn-custom:active 
+{
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Adding Pulsing Animation */
+@keyframes pulse 
+{
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 0, 0);
+  }
+}
+
+.btn-custom:hover 
+{
+  animation: pulse 1.5s infinite;
+}
+
+/* Additional Hover Effect: Background Animation */
+.btn-custom::before 
+{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 0, 0.5), rgba(0, 0, 0, 0));
+  transition: all 0.75s;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.btn-custom:hover::before 
+{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Text Shadow for Extra Glow */
+.btn-custom:hover 
+{
+  text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
+}
+
+/* Fine-Tuning for Responsiveness */
+@media (max-width: 768px) 
+{
+  .btn-custom {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .btn-custom .discord-icon {
+    height: 35px;
+  }
 }
 /* preloader section  */
 .preloader {
@@ -1732,48 +1888,54 @@ div.card {
 }
 
 /* about section */
-
 #about {
   padding: 4% 10%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#about {
   width: 100%;
   height: 100vh;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
 }
+
 .main-img img {
   max-width: 100%;
   width: 500px;
   height: auto;
   border-radius: 50%;
+  display: block;
+  margin: 0 auto; 
 }
+
 .text {
   position: relative;
   width: 100%;
   height: fit-content;
   background: transparent;
 }
+
 .text:before {
   content: " ";
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 4%;
-  width: 100%;
-  height: 100%;
   background: rgba(255, 242, 0, 0.2);
   border-radius: 20px;
+  z-index: 0;
 }
+
 .text > * {
   position: relative;
   z-index: 1;
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .text h4 {
   color: #ffffff;
   font-size: 20px;
@@ -1781,6 +1943,7 @@ div.card {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+
 .text h2 {
   color: #f1c11a;
   font-size: 36px;
@@ -1799,17 +1962,21 @@ div.card {
   margin-bottom: 60px;
   text-align: justify;
 }
+
 .last-text {
   display: flex;
 }
+
 .text1 {
   margin-right: 60px;
 }
+
 .last-text h3 {
   color: #c8ba00;
   font-size: 60px;
   font-weight: 700;
 }
+
 .last-text h5 {
   color: #ffffff;
   font-size: 18px;
@@ -1818,18 +1985,18 @@ div.card {
   padding: 20px;
 }
 
-/* responsive design */
+/* Responsive design */
 @media (max-width: 1385px) {
   #about {
     padding: 4% 10%;
     transition: 0.3s;
   }
-  .main-img {
-    width: 500px;
-    height: auto;
+  .main-img img {
+    width: 100%;
     transition: 0.3s;
   }
 }
+
 @media (max-width: 1240px) {
   .text h2 {
     font-size: 30px;
@@ -1840,10 +2007,76 @@ div.card {
 @media (max-width: 1040px) {
   #about {
     grid-template-columns: 1fr;
-    height: 100%;
+    height: auto;
   }
   .main-img img {
     padding-top: 40px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-img img {
+    max-width: 300px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .text {
+    width: 100%;
+    padding: 10px;
+  }
+  .text h2 {
+    font-size: 28px;
+  }
+  .text p {
+    font-size: 14px;
+  }
+  .last-text h3 {
+    font-size: 50px;
+  }
+  .last-text h5 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-img img {
+    max-width: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .text {
+    padding: 10px;
+  }
+  .text:before {
+    padding: 2%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 242, 0, 0.1); 
+  }
+  .text h2 {
+    font-size: 24px;
+  }
+  .text p {
+    font-size: 12px;
+  }
+  .last-text {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text1 {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .last-text h3 {
+    font-size: 40px;
+  }
+  .last-text h5 {
+    font-size: 14px;
   }
 }
 
@@ -1856,7 +2089,6 @@ div.card {
 .media-body-p1 {
   padding-bottom: 22px;
 }
-
 /* services section */
 #services {
   background: #f1c11a;
@@ -2213,9 +2445,9 @@ label.selected i {
 } */
 
 .submit {
-  background-color: #007bff;
-  color: white;
-  padding: 14px 24px;
+  background-color: #0e0f0f;
+  color: rgb(233, 236, 40);
+  padding: 14px 14px 14px 14px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -2713,8 +2945,9 @@ button {
   border: none;
   background-color: transparent;
   -webkit-border-radius: 0;
-  border-radius: 0;
-}
+  border-radius: 0;}
+
+
 .feed {
   max-width: 800px;
   margin: 50px auto;
@@ -2790,15 +3023,15 @@ textarea {
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 30px;
   cursor: pointer;
   font-size: 16px;
   display: block;
   margin: 0 auto;
 }
 .submit-btn:hover {
-  background-color:rgba(230, 61, 23, 0.995);
-  opacity: 0.5;
+  background-color:rgba(206, 238, 0, 0.995);
+  opacity: 0.6;
   color: #000000;
   font-weight: bold;
 }
@@ -2845,4 +3078,26 @@ body {
 .logo-link:link,
 .logo-link:visited {
   text-decoration: none;
+}
+/* footer social  */
+.social a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social a:hover {
+  color: yellow;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social i {
+  font-size: 24px;
+  margin: 0 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social a:hover i {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
