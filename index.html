@@ -7,19 +7,29 @@
 
   <title>Open Source Village</title>
   <!-- Meta tags-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Aman Yadav" />
-  <meta name="keywords" content=", village community, collaboration, resource sharing, communication, transparency, collective decision-making, local projects, digital tools.">
-  <meta name="description" content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
+  <meta name="keywords"
+    content=", village community, collaboration, resource sharing, communication, transparency, collective decision-making, local projects, digital tools.">
+  <meta name="description"
+    content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
   <meta name="language" content="English">
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://community-site-theta.vercel.app/" />
   <meta property="og:title" content="Open Source Village">
-  <meta name="og:description" content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
-  
+  <meta name="og:description"
+    content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
+
+  <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -51,81 +61,76 @@
 
   <style>
     .navbar {
-      background-color: #333;
       /* Background color for navbar */
       padding: 5px 20px;
       /* Reduced padding for navbar */
+    }
 
-      /* Navbar styles */
-      /* Navbar styles */
-      /* Navbar styles */
-      .navbar {
-        /* background-color: #333; Background color for navbar */
-        padding: 0;
-        /* Remove padding for the navbar */
+    /* Navbar styles */
+    .navbar {
+      /* background-color: #333; Background color for navbar */
+      padding: 0;
+      /* Remove padding for the navbar */
 
-      }
+    }
 
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 10px;
-        /* Adjust height of the navbar */
-      }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* height: 10px; */
+      /* Adjust height of the navbar */
+    }
 
-      .carousell {
-
-        display: flex;
-        padding: 0;
-        transition: transform 0.5s ease;
-      }
-
-      ::-webkit-scrollbar {
-        width: 10px;
-        background-color: #F5F5F5;
-      }
-
-      ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        background-color: #F5F5F5;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background-color: #f1c11a;
-        background-image: -webkit-linear-gradient(45deg,
-            rgba(255, 255, 255, .2) 25%,
-            transparent 25%,
-            transparent 50%,
-            rgba(255, 255, 255, .2) 50%,
-            rgba(255, 255, 255, .2) 75%,
-            transparent 75%,
-            transparent);
-        border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background-color: #d1a10a;
-      }
-
-      .wrapper {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-      }
-
-      .home-thumb .btn {
-        background-color: transparent;
-      }
-
-      .home-thumb .btn:hover {
-        box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255), 0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
-      }
+    .carousell {
 
       display: flex;
       padding: 0;
       transition: transform 0.5s ease;
     }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #f1c11a;
+      background-image: -webkit-linear-gradient(45deg,
+          rgba(255, 255, 255, .2) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, .2) 50%,
+          rgba(255, 255, 255, .2) 75%,
+          transparent 75%,
+          transparent);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #d1a10a;
+    }
+
+    .wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .home-thumb .btn {
+      background-color: transparent;
+    }
+
+    .home-thumb .btn:hover {
+      box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255), 0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
+    }
+
+
 
     ::-webkit-scrollbar {
       width: 10px;
@@ -194,6 +199,7 @@
       /* Logo text color */
     }
 
+
     ul {
       display: flex;
       list-style-type: none;
@@ -241,134 +247,325 @@
       width: 30px;
       /* Reduced width of the profile image */
       border-radius: 50%;
-      margin-left: 10px;
       cursor: pointer;
     }
 
     /* Additional styles for the navbar to make it more attractive */
+
+
+
+    .theme-switch img {
+      margin-right: 20px !important;
+    }
+
     nav {
       background-color: #444;
-      /* Darker background color */
+      /*Navbar background color*/
       padding: 5px 20px;
+      /* Padding */
+
+      /* border-radius: 8px; */
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      display: grid;
+      grid-auto-flow: column;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    ul li {
+      position: relative;
+    }
+
+
+
+
+    .slider {
+      width: 50px;
+      height: 20px;
+      /* Slider height */
+
+      background-color: #ccc;
+      position: relative;
+      border-radius: 34px;
+      transition: 0.4s;
+      margin-right: 0px !important;
+    }
+
+    .slider:before {
+      content: "";
+      position: absolute;
+      width: 26px;
+      /* Adjust width of the toggle knob */
+      height: 26px;
+      /* Adjust height of the toggle knob */
+      border-radius: 50%;
+      background-color: white;
+      transition: 0.4s;
+      left: 4px;
+      bottom: 4px;
+    }
+
+    ul li a {
+      padding: 5px;
       /* Reduced padding */
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
 
-      .theme-switch img {
-        margin-right: 20px !important;
+    ul li a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      /* Background on hover */
+    }
+
+    /* Adjust the profile image positioning */
+    #image {
+      margin-left: 10px;
+      /* Adjust spacing between profile image and nav items */
+    }
+
+    .contact-form .submit {
+      background: #e15509;
+      color: rgb(9, 9, 9);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      margin-left: 220px;
+    }
+
+    .contact-form .submit:hover {
+      background: #f5d244;
+      font-size: 20px;
+      color: white;
+    }
+
+    /* Style for the theme switcher */
+    .theme-switch {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+
+    .rating input[type="radio"] {
+      display: none;
+      /* Hide radio buttons */
+    }
+
+    .rating label {
+      font-size: 2rem;
+      /* Emoji size */
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .rating label:hover {
+      transform: scale(1.2);
+      /* Enlarge on hover */
+    }
+
+    .rating label:active {
+      transform: scale(1.1);
+      /* Reduce size on active */
+    }
+
+    /*small screen text fix*/
+    @media (max-width: 768px) {
+      .home-thumb h1 {
+        font-size: 2rem;
       }
 
-      nav {
-        background-color: #444;
-        /*Navbar background color*/
-        padding: 5px 20px;
-        /* Padding */
-
-        border-radius: 8px;
-        display: grid;
-        grid-auto-flow: column;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      .home-thumb h3 {
+        font-size: 1rem;
       }
 
-      ul li {
-        position: relative;
+      .btn-lg {
+        font-size: 0.9rem;
+      }
+    }
+
+    .active1 {
+      color: black;
+      background-color: #e8701f;
+      transition: color 0s, background-color 0s;
+      border-radius: 20px;
+      background: rgb(239, 188, 0);
+      background: linear-gradient(90deg, rgba(239, 188, 0, 1) 47%, rgba(204, 133, 110, 1) 100%);
+    }
+
+    /*small screen theme toggle and image logo*/
+    @media (max-width: 767px) {
+
+      .theme-switch,
+      #checkbox {
+        opacity: 0;
+        pointer-events: none;
       }
 
-      slider {
-        width: 60px;
-        /* Increased width of the slider */
-        height: 34px;
-        /* Increased height of the slider */
+      #image {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+  .modal {
+  backdrop-filter: blur(2px);
+  padding: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modal-content {
+  background: linear-gradient( gold, rgb(255, 255, 255));
+  border-radius: 1em;
+  padding: 2em;
+  color: #000; /* Ensures text is readable on the gradient background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+}
+
+.modal-body h1 {
+  font-weight: 900;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #4B3E2A; /* Dark brown color */
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  padding-bottom: 10px;
+  color: #4B3E2A; /* Dark brown color */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+.flex {
+  width: fit-content;
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex img {
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #D3D3D3; /* Light grey background for image */
+}
+
+a.pre-order-btn {
+  color: #000;
+  background-color: gold;
+  border-radius: 1em;
+  padding: 1em;
+  display: block;
+  margin: 2em auto;
+  width: 70%;
+  font-size: 1.25em;
+  font-weight: 660;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a.pre-order-btn:hover {
+  background-color: #e8701f; /* Dark brown color on hover */
+  text-decoration: none;
+  color: gold;
+}
+
+.modal-footer {
+  border-top: none;
+  text-align: center;
+  padding: 1em 0;
+}
+.modal-header{
+  background-color: #f3b7127b;
+  border-radius: 20px;
+  margin-top: 20px;
+  /* margin-bottom: 1em; */
+}
+.modal-footer button {
+  background-color: gold;
+  color: #000;
+  border: none;
+  padding: 0.75em 1.5em;
+  border-radius: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-footer button:hover {
+  background-color: #ff3700; /* Dark brown color on hover */
+  color: gold;
+}
+
+.modal-content .close{
+  margin-right:0px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  /* background-color:#e15509; */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .modal-body h1 {
+    font-size: 1.8em;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+
+  a.pre-order-btn {
+    width: 80%;
+    font-size: 1.1em;
+  }
+
+  .modal-footer button {
+    padding: 0.6em 1.2em;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-body h1 {
+    font-size: 1.5em;
+  }
+
+  .modal-title {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  a.pre-order-btn {
+    width: 90%;
+    font-size: 1em;
+    padding: 0.8em;
+  }
+
+  .modal-footer button {
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+  }
+}
+
+  
+  
 
 
-        .slider {
-          width: 50px;
-          height: 34px;
-          /* Slider height */
-
-          background-color: #ccc;
-          position: relative;
-          border-radius: 34px;
-          transition: 0.4s;
-          margin-right: 0px !important;
-        }
-
-        slider:before {
-          content: "";
-          position: absolute;
-          width: 26px;
-          /* Adjust width of the toggle knob */
-          height: 26px;
-          /* Adjust height of the toggle knob */
-          border-radius: 50%;
-          background-color: white;
-          transition: 0.4s;
-          left: 4px;
-          bottom: 4px;
-        }
-
-        ul li a {
-          padding: 5px;
-          /* Reduced padding */
-          border-radius: 5px;
-          transition: background 0.3s;
-        }
-
-        ul li a:hover {
-          background: rgba(255, 255, 255, 0.1);
-          /* Background on hover */
-        }
-
-        /* Adjust the profile image positioning */
-        #image {
-          margin-left: 10px;
-          /* Adjust spacing between profile image and nav items */
-        }
-
-        .contact-form .submit {
-          background: #e15509;
-          color: rgb(9, 9, 9);
-          padding: 10px 20px;
-          border: none;
-          border-radius: 10px;
-          cursor: pointer;
-          font-size: 18px;
-          margin-left: 220px;
-        }
-
-        .contact-form .submit:hover {
-          background: #f5d244;
-          font-size: 20px;
-          color: white;
-        }
-
-        /* Style for the theme switcher */
-        .theme-switch {
-          display: flex;
-          align-items: center;
-          cursor: pointer;
-        }
-
-
-        .rating input[type="radio"] {
-          display: none;
-          /* Hide radio buttons */
-        }
-
-        .rating label {
-          font-size: 2rem;
-          /* Emoji size */
-          cursor: pointer;
-          transition: transform 0.2s;
-        }
-
-        .rating label:hover {
-          transform: scale(1.2);
-          /* Enlarge on hover */
-        }
-
-        .rating label:active {
-          transform: scale(1.1);
-          /* Reduce size on active */
-        }
   </style>
 
 </head>
@@ -378,28 +575,62 @@
 
 <body>
 
+
+  <!-- login modal  -->
+
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-header">
+          
+            <div class="flex">
+                <img src="images/logo2.jpeg" alt="" class="logo">
+                  <h4 class="modal-title">Open Source Village</h4>
+            </div>
+        </div>
+        <div class="modal-body text-center">
+          <h1>Start your journey now</h1>
+          <p>If you don't have an account yet, register and start your journey.</p>
+          <a class="pre-order-btn" href="login.html">Login/Register</a>
+        </div>
+        <div class="modal-footer">
+          <!--         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <script>
+  $(window).ready(function(){        
+   $('#myModal').modal('show');
+    }); 
+  </script>
+
   <!-- Chatbot integration section -->
   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
   <script>
     window.botpressWebChat.init({
-      "composerPlaceholder": "Open Source Village",
-      "botConversationDescription": "Ask me anything!",
-      "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
-      "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
-      "lazySocket": true,
-      "themeName": "prism",
-      "botName": "Open Source Village",
-      "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
-      "stylesheet": "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
-      "frontendVersion": "v1",
-      "showPoweredBy": true,
-      "theme": "prism",
-      "themeColor": "#2563eb",
-      "allowedOrigins": [],
-      "enableConversationDeletion": true
+        "composerPlaceholder": "Ask me anything!",
+        "botConversationDescription": "Welcome to Open Source Village!",
+        "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+        "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
+        "lazySocket": true,
+        "themeName": "prism",
+        "botName": "Open Source Village",
+        "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+        "stylesheet": "https://webchat-styler-css.botpress.app/prod/328bf234-c9e7-4f98-9c94-69f1a0877b98/v99808/style.css",
+        "frontendVersion": "v1",
+        "useSessionStorage": true,
+        "enableConversationDeletion": true,
+        "theme": "prism",
+        "themeColor": "#2563eb",
+        "allowedOrigins": []
     });
   </script>
 
@@ -430,30 +661,253 @@
   <!-- Navbar -->
   <div class="navbar">
     <nav>
-      <a class="logo-link" href="#home">
-        <label class="logo">
-          <img src="images/fav.png" alt="logo">
-
-          <span class="logo-text">Open Source Village</span>
-        </label>
-
-        <div>
-          <span class="logo-subtext">Source</span>
+      <div id="ham-menu">
+        <div id="bars" onclick="togMenu(this)">
+        <div id="first" class="bar"></div>
+        <div id="sec" class="bar"></div>
+        <div id="third" class="bar"></div>
         </div>
+        <div id="nav-menu">
+            <ul>
+                <li><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
+                <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#about">About</a></li>
+                <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
+                <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
+                <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
+                <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+              </ul>
+          </div>
+      </div>
+      <a class="logo-link" href="#home">
+        <div class="logo-title">
+                    <img  class="logo" src="images/logo2.jpeg" alt="logo">
+
+                    <span class="logo-text">Open Source Village</span>
+                   </div>
+
+        <!-- <div>
+          <span class="logo-subtext">Source</span>
+        </div> -->
 
       </a>
       <ul>
-        <li><i class="fa-solid fa-house"></i><a class="active" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-address-card"></i><a href="#about">About</a></li>
-        <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-pen-to-square"></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-address-book"></i><a href="#contact">Contact</a></li>
+        <li><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#about">About</a></li>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
+        <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
         <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
       </ul>
-      <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <div class="slider round" id="toggle"></div>
-      </label>
+
+      <div class="toggle-container" style="top: 0px;">
+        <input type="checkbox" id="checkbox" class="switch-checkbox">
+        <label class="theme-switch" for="checkbox">
+          <div class="toggle-button">
+            <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+            <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+          </div>
+        </label>
+      </div>
+      <!--Styles for side menu-->
+      <style>
+        #bars{
+            display: none;
+        }
+        .bar{
+            width:27px;
+            height:3px;
+            background-color:white;
+            margin: 7px;
+            border-radius: 20px;
+            transition: all 0.4s;
+        }
+        .cliked #first{
+            transform: translate(0, 10px) rotate(-45deg);
+            
+        }
+        .cliked #sec {opacity: 0;}
+
+        .cliked #third {
+        transform: translate(0, -10px) rotate(45deg);
+        }
+        #nav-menu{
+            display: none;
+            opacity: 0;
+            position: fixed;
+            top:63px;
+            z-index: 1;
+            margin-top: 27px;
+            width:auto;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            backdrop-filter: blur(4px);
+            padding: 20px 0;
+            border: none;
+            transition: all 0.6s;
+            
+        }
+        #nav-menu ul{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: inherit;
+            width: auto;
+            position: absolute;
+            top:0;
+            right:inherit;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+        }
+        #nav-menu ul li{
+            display: none;
+            margin: 10px 20px 0 30px;
+        }
+
+        @media (max-width: 858px) {
+            #bars{
+            display: block;
+            position: absolute;
+            left:10px;
+            top:50%;
+            transform: translate(0,-55%);
+            }
+            #nav-menu{
+              left:0;
+            }
+            
+            #nav-menu ul li{
+              display:flex;
+            }
+            #nav-menu ul li a:hover{
+              color: white;
+              background-color: #e8701f;
+              transition: color 0s, background-color 0s;
+              border-radius: 20px;
+              background: rgb(239, 188, 0);
+              background: linear-gradient( 90deg, rgba(239, 188, 0, 1) 47%, rgba(204, 133, 110, 1) 100% );
+            }
+            
+            #nav-menu.sticky-nav-menu ul{
+              background: linear-gradient( rgba(249, 177, 43, 0.7),rgb(247, 113, 3));
+              color: white !important;
+              border-bottom: 1.5px solid rgb(0, 0, 0);
+              backdrop-filter: blur(3px);
+            }
+            #nav-menu.sticky-nav-menu{
+              top:52px;
+            }
+        }
+      </style>
+
+      <script>
+        function togMenu(obj){
+            var headMenu = document.querySelector('.navbar nav');
+            var sideMenu = document.getElementById('nav-menu');
+            obj.classList.toggle("cliked");
+            if(obj.classList.contains('cliked')){
+              headMenu.style.borderBottomLeftRadius = '0px';
+              sideMenu.style.display='block';
+              sideMenu.style.opacity='1';
+            }else{
+              headMenu.style.borderBottomLeftRadius=headMenu.style.borderBottomRightRadius;
+              sideMenu.style.opacity='0';
+              sideMenu.style.display='none';
+            }
+        }
+        window.addEventListener("scroll", function () {
+            var sideMenu = document.getElementById('nav-menu');
+            sideMenu.classList.toggle("sticky-nav-menu", window.scrollY > 50)
+            })
+      
+      </script>
+      
+
+      <style>
+        .toggle-container {
+          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 30px 0 0 30px;
+        }
+
+        .light-mode .toggle-container {
+          right: -4px;
+          top: 15px;
+        }
+        
+        /* Hidden Checkbox */
+        .switch-checkbox {
+          display: none;
+        }
+
+        .theme-switch {
+          position: relative;
+          width: 45px;
+          height: 30px;
+          background-color: #ccc;
+          border-radius: 20px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 5px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: background-color 0.5s ease;
+        }
+
+        .theme-switch .light-mode-icon,
+        .theme-switch .dark-mode-icon {
+          font-size: 19px;
+          position: absolute;
+          cursor: pointer;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: opacity 0.5s ease, color 0.5s ease;
+        }
+
+        .theme-switch .light-mode-icon {
+          color: #f39c12;
+        }
+
+        .theme-switch .dark-mode-icon {
+          color: #bdc3c7;
+          opacity: 0;
+        }
+
+        .toggle-button {
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          width: 25px;
+          height: 25px;
+          background-color: #fff;
+          border-radius: 50%;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+          transition: transform 0.5s ease, background-color 0.5s ease;
+        }
+
+        /* Checkbox Checked State */
+        .switch-checkbox:checked + .theme-switch {
+          background-color: #34495e;
+        }
+
+        .switch-checkbox:checked + .theme-switch .light-mode-icon {
+          opacity: 0;
+        }
+
+        .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+          opacity: 1;
+        }
+
+        .switch-checkbox:checked + .theme-switch .toggle-button {
+          transform: translateX(13px);
+          /* background-color: #34495e; */
+        }
+
+      </style>
 
       <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
 
@@ -464,22 +918,47 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+
       const toggleButton = document.getElementById('checkbox');
+
+      const currentMode = localStorage.getItem('dark-mode');
+
+      if (currentMode === 'enabled') {
+
+        document.body.classList.add('dark-mode');
+
+        toggleButton.checked = true;
+
+      }
+
       toggleButton.addEventListener('change', function () {
+
         document.body.classList.toggle('dark-mode');
+
+        if (document.body.classList.contains('dark-mode')) {
+
+          localStorage.setItem('dark-mode', 'enabled');
+
+        }
+        else {
+
+          localStorage.setItem('dark-mode', 'disabled');
+
+        }
       });
+
     });
   </script>
 
 
   <!-- Home Section -->
-  <section class="home" id="home">
+  <section class="section home" id="home">
     <div class="container">
       <div class="home-thumb">
         <br><br><br>
         <h1>Open Source Village</h1>
         <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
-        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong></h3>
+        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are the <strong>Open Source Village</strong></h3>
         <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now</h3>
         <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
           data-wow-delay="1s" style="color:white;">
@@ -495,13 +974,6 @@
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"
             alt="LinkedIn">
         </a>
-        <a href="https://discord.gg/mM9qFh2uZR" target="_blank"
-            class="btn btn-lg btn-default smoothScroll fadeInUp wow d-flex align-items-center" data-wow-delay="1s"style="color:white">
-            JOIN DISCORD
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
-              alt="Discord" style="height: 40px; border-radius: 50px; margin-left: 10px;">
-          </a>
       </div>
     </div>
   </section>
@@ -519,9 +991,9 @@
 
 
   <!-- about section -->
-  <section id="about">
+  <section class="section" id="about">
     <div class="main-img">
-      <img src="fav.png" alt="" />
+      <img src="./images/logo1.jpeg" alt="" />
     </div>
     <div class="text">
       <br>
@@ -539,16 +1011,36 @@
       </p>
       <div class="last-text">
         <div class="text1">
-          <h3>1000+</h3>
+          <h3 class="counter">0+</h3>
           <h5>MEMBERS</h5>
         </div>
       </div>
     </div>
   </section>
+  <br>
+
+  <script>
+    // JavaScript to animate the counter
+    document.addEventListener("DOMContentLoaded", () => {
+      const counterElement = document.querySelector('.counter');
+      const targetNumber = 1000;
+      const duration = 2000;
+      const stepTime = Math.abs(Math.floor(duration / targetNumber));
+      
+      let currentNumber = 0;
+      const counter = setInterval(() => {
+        currentNumber += 1;
+        counterElement.textContent = currentNumber + '+';
+        if (currentNumber >= targetNumber) {
+          clearInterval(counter);
+        }
+      }, stepTime);
+    });
+  </script>
 
 
   <!-- services section -->
-  <section id="services">
+  <section class="section" id="services">
     <div class="container">
       <div class="service-title wow fadeInUp" data-wow-delay="0.3s">SERVICES</div>
       <div class="service-container">
@@ -600,7 +1092,7 @@
     </div>
   </section>
   <!-- Testimonials section -->
-  <section id="testimonials">
+  <section class="section" id="testimonials">
     <div class="container">
       <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Testimonials</h2>
       <div class="row">
@@ -682,6 +1174,16 @@
     </div>
   </section>
 
+  <!--Updated styles for resp testimonials-->
+  <style>
+    #testimonials .wrapper{
+      display: grid;
+    }
+    #testimonials .section-title{
+      font-size: calc(2.3rem+2.8vw);
+    }
+  </style> 
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -722,13 +1224,16 @@
 
 
 
-  <section class="faqq">
+  <section class="faqq section ">
     <div class="containerr">
       <div class="accordion">
-        <h1 class="section-title wow fadeInUp text-center" data-wow-delay="0.3s">FAQ</h1>
+        <div class="service-title wow fadeInUp animated" data-wow-delay="0.3s"
+          style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">FAQ</div>
         <div class="accordion-item">
           <button id="accordion-button-1" aria-expanded="false">
-            <span class="accordion-title">How can I contribute to the community's goals and projects?</span>
+            <span class="accordion-title">How can I contribute to the community's goals and projects?<i
+                class="fa-solid fa-chevron-down"></i></span>
+
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -741,7 +1246,8 @@
 
         <div class="accordion-item">
           <button id="accordion-button-2" aria-expanded="false">
-            <span class="accordion-title">What benefits do members receive from participating in the community?</span>
+            <span class="accordion-title">What benefits do members receive from participating in the community?<i
+                class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -754,7 +1260,8 @@
 
         <div class="accordion-item">
           <button id="accordion-button-3" aria-expanded="false">
-            <span class="accordion-title">How can I join the open source village community?</span>
+            <span class="accordion-title">How can I join the open source village community?<i
+                class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -766,7 +1273,7 @@
 
         <div class="accordion-item">
           <button id="accordion-button-4" aria-expanded="false">
-            <span class="accordion-title">What is open source community?</span>
+            <span class="accordion-title">What is open source community?<i class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -778,7 +1285,8 @@
 
         <div class="accordion-item">
           <button id="accordion-button-5" aria-expanded="false">
-            <span class="accordion-title">What is the purpose of the open source village community website?</span>
+            <span class="accordion-title">What is the purpose of the open source village community website?<i
+                class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -790,7 +1298,8 @@
 
         <div class="accordion-item">
           <button id="accordion-button-6" aria-expanded="false">
-            <span class="accordion-title">Are there any eligibility criteria to join the community?</span>
+            <span class="accordion-title">Are there any eligibility criteria to join the community?<i
+                class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -801,7 +1310,8 @@
 
         <div class="accordion-item">
           <button id="accordion-button-7" aria-expanded="false">
-            <span class="accordion-title">How can I find and join specific projects within the community?</span>
+            <span class="accordion-title">How can I find and join specific projects within the community?<i
+                class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -813,7 +1323,8 @@
 
         <div class="accordion-item">
           <button id="accordion-button-9" aria-expanded="false">
-            <span class="accordion-title">How can I stay updated with the community's latest news and events?</span>
+            <span class="accordion-title">How can I stay updated with the community's latest news and events?<i
+                class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -824,7 +1335,8 @@
 
         <div class="accordion-item">
           <button id="accordion-button-10" aria-expanded="false">
-            <span class="accordion-title">Who can I contact if I have more questions or need support?</span>
+            <span class="accordion-title">Who can I contact if I have more questions or need support?<i
+                class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -838,7 +1350,7 @@
 
 
 
-  <div class="container" style="margin-top: 10px;">
+  <div class="container section" style="margin-top: 10px;">
 
     <div class="row reviews" style="margin-top: 40px;">
       <div class="card1 mb-3" style="max-width: 540px;">
@@ -983,174 +1495,501 @@
   </section>
 
   <!-- contact -->
+  <style>
+    .contact-form .input {
+      color: black;
+    }
 
-  <section id="contact" class="form-container">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="section-title" style="margin-top: 100px;">
-            <h1 style="color: yellow;">Get in Touch</h1>
-            <p style="color: white;">If you have any questions or inquiries, feel free to contact us!</p>
+    .input-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input {
+      width: 100%;
+      padding: 15px;
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      color: black;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .input:focus {
+      background-color: #fff;
+      border-color: #333;
+      outline: none;
+      color:black !important;
+    }
+
+    .textarea .input {
+      height: 100px;
+      resize: none;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #555;
+    }
+
+    .input::placeholder {
+      color: #999;
+    }
+
+    .thank-you-message,
+    .error-message {
+      display: none;
+      font-size: 16px;
+      margin-top: 0px;
+      margin-left: 50px;
+      margin-bottom: 10px;
+    }
+
+    .thank-you-message {
+      color: green;
+      font-size: 20px;
+    }
+
+    .error-message { 
+      color: red;
+      font-size: 20px;
+    }
+
+    @media (max-width: 767px) {
+      .form {
+        display: flex !important;
+        flex-direction: column;
+      }
+
+      .contact-info,
+      .contact-form {
+        padding: 5px;
+      }
+
+      .input-container {
+        width: 95%;
+        margin: 0 auto;
+      }
+
+      .contact-info .title {
+        font-size: 16px;
+        margin-top: 35px;
+        text-align: center;
+      }
+
+      .contact-form .title {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .btn {
+        padding: 5px 10px;
+        width: 100px;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .thank-you-message {
+        font-size: 15px;
+      }
+
+      .error-message {
+        font-size: 10px;
+      }
+    }
+  </style>
+  <div class="contact section" id="contact">
+    <img src="img/shape.png" class="square" alt="" />
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Let's get in touch</h3>
+        <br>
+        <div class="info">
+          <div class="information">
+            <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;
+            <p>92 Cherry Drive Uniondale, NY 11553</p>
           </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-            <form id="contact-form" action="" method="POST">
-              <div class="col-md-6 col-sm-6">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-              </div>
-              <div style="margin-left: 2px; margin-right: 35px;" class="msg col-md-12 col-sm-12">
-                <textarea name="message" class="form-control" placeholder="Message" rows="6" style="resize: none;"
-                  required></textarea>
-              </div>
-              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-                <button type="submit" class="submit-btn" style="margin-bottom:10px;">SEND MESSAGE</button>
-                <div id="message"></div>
-              </div>
-            </form>
+          <div class="information">
+            <i class="fas fa-envelope"></i>&nbsp;&nbsp;
+            <p>lorem@ipsum.com</p>
+          </div>
+          <div class="information">
+            <i class="fas fa-phone"></i>&nbsp;&nbsp;
+            <p>123-456-789</p>
+          </div>
+        </div>
+        <div class="social-media">
+          <p class="connect-us">Connect with us :</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/open-source-village/">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
       </div>
+      <style>
+        a:hover .fa-brands{
+          color: yellow;
+        }
+        .fa-brands{  
+          font-size: 1rem;
+        }
+      </style>
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+        <form id="contactForm" autocomplete="off">
+          <h3 class="title">Contact us</h3>
+          <div class="input-container">
+            <input type="text" name="name" class="input" placeholder="Username" required />
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" class="input" placeholder="Email" required />
+          </div>
+          <div class="input-container">
+            <input type="tel" name="phone" class="input" placeholder="Phone" required />
+          </div>
+          <div class="input-container textarea">
+            <textarea name="message" class="input" placeholder="Message" required></textarea>
+          </div>
+          <input type="submit" value="Send" class="btn" />
+        </form>
+        <div class="thank-you-message" id="thankYouMessage">Thank you, we will connect soon.</div>
+        <div class="error-message" id="errorMessage">Please fill all the details.</div>
+      </div>
     </div>
-  </section>
+  </div>
+
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const thankYouMessage = document.getElementById('thankYouMessage');
+      const errorMessage = document.getElementById('errorMessage');
+
+
+      const name = document.querySelector('input[name="name"]').value.trim();
+      const email = document.querySelector('input[name="email"]').value.trim();
+      const phone = document.querySelector('input[name="phone"]').value.trim();
+      const message = document.querySelector('textarea[name="message"]').value.trim();
+
+
+      if (name === "" || email === "" || phone === "" || message === "") {
+        errorMessage.style.display = 'block';
+        thankYouMessage.style.display = 'none';
+      } else {
+        errorMessage.style.display = 'none';
+        thankYouMessage.style.display = 'block';
+
+
+        setTimeout(function () {
+          thankYouMessage.style.display = 'none';
+          document.getElementById('contactForm').reset();
+        }, 3000);
+      }
+    });
+  </script>
+
 
 
   <!-- feedback -->
-  <section id="feedback" class="form-container" style="margin-top: 100px;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="section-title">
-            <h1 style="color: yellow;">Give us your Feedback</h1>
-            <p style="color: white;">We value your opinion. Please share your feedback with us!</p>
-          </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-            <form id="feedback-form" action="" method="POST">
-              <div class="col-md-6 col-sm-6">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-              </div>
-              <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
-                <textarea name="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;"
-                  required></textarea>
-              </div>
-              <div class="col-md-12 col-sm-12">
-                <p style="color: white;">Rate your experience:</p>
-                <div class="col-12 rating rad">
-                  <input type="radio" id="star5" name="rating" value="5">
-                  <label for="star5"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star4" name="rating" value="4">
-                  <label for="star4"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star3" name="rating" value="3">
-                  <label for="star3"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star2" name="rating" value="2">
-                  <label for="star2"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star1" name="rating" value="1">
-                  <label for="star1"><i class="fas fa-star"></i></label>
-
-
-                  <!-- feedback -->
-                  <!DOCTYPE html>
-                  <html lang="en">
-
-                  <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Feedback Form</title>
-                    <link rel="stylesheet" href="styles.css">
-                  </head>
-
-                  <body>
-                    <script>
-                      function handleFeedbackSubmit(event) {
-                        event.preventDefault(); // Prevent the default form submission
-
-                        // Get form values
-                        var name = document.getElementById("name").value;
-                        var email = document.getElementById("email").value;
-                        var message = document.getElementById("message").value;
-                        var ratingChecked = document.querySelector('input[name="rating"]:checked');
-
-                        // Check if all fields are filled
-                        if (name === "" || email === "" || message === "" || !ratingChecked) {
-                          Toastify({
-                            text: "Thanks For Your Feedback :)",
-                            duration: 3000,
-                            close: true,
-                            gravity: "center", // `top` or `bottom`
-                            position: "center", // `left`, `center` or `right`
-                            backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
-                            stopOnFocus: true // Prevents dismissing of toast on hover
-                          }).showToast();
-                        } else {
-                          // Display the Toastify message
-                          Toastify({
-                            text: "Thanks For Your Feedback :)",
-                            duration: 3000,
-                            close: true,
-                            gravity: "center", // `top` or `bottom`
-                            position: "center", // `left`, `center` or `right`
-                            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-                            stopOnFocus: true // Prevents dismissing of toast on hover
-                          }).showToast();
-
-                          // Optionally, you can reset the form
-                          document.getElementById("feedback-form").reset();
-                        }
-                      }
-                    </script>
-                </div>
-              </div>
-              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-                <button type="submit" class="submit-btn" style="margin-bottom: 10px;">SUBMIT FEEDBACK</button>
-                <div id="message1"></div>
-              </div>
-          </div>
-  </section>
-
-  </main>
-  <script>
-    const labels = document.querySelectorAll('.rating label');
-
-    labels.forEach(label => {
-      label.addEventListener('click', () => {
-        labels.forEach(l => l.classList.remove('selected'));
-        label.classList.add('selected');
-      });
-    });          
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("contact-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        document.getElementById("message").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your message sent successfully!</span>";
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementsByName("message")[0].value = "";
-      });
-    });      
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("feedback-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        document.getElementById("message1").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your feedback submitted successfully!</span>";
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementsByName("message1")[0].value = "";
-      });
-    });      
-  </script>
-
-  <script>
-    function sendEmail() {
-      alert("Email sent successfully!");
+  <style>
+    .feedback-wrapper {
+      margin-top: 0px;
+      border-radius: 10px ;
+      width: 38%;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
+      box-sizing: border-box;
     }
-  </script>
+  
+    .feedback-form {
+      background: linear-gradient(to bottom, #fdde6d, #ff7300); 
+      padding: 20px ;
+      border-radius: 10px ;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
+      box-sizing: border-box ;
+    }
+
+    .feedback-form h2 {
+      font-size: 30px ;
+     font-weight: 800;
+     
+      text-align: center ;
+      color: rgb(208, 113, 4) ;
+    }
+
+    .feedback-form label {
+      display: block ;
+      margin-bottom: 0px ;
+      font-size: 17px ;
+      color: #333 ;
+      font-weight: 300;
+    }
+
+    .feedback-form input[type="text"],
+    .feedback-form input[type="email"],
+    .feedback-form textarea {
+      width: 100% ;
+      padding: 10px ;
+      margin-top: 2px;
+      margin-bottom: 10px ;
+      font-size: 16px ;
+      border: 2px solid #ccc ;
+      border-radius: 5px ;
+      transition: border-color 0.3s;
+    }
+
+    .feedback-form input[type="text"]:focus,
+    .feedback-form input[type="email"]:focus,
+    .feedback-form textarea:focus {
+      outline: none !important;
+      color: black !important;
+    }
+
+    .feedback-form button[type="submit"] {
+      display: block !important;
+      width: 100% !important;
+      padding: 12px !important;
+      font-size: 18px !important;
+      border: none !important;
+      border-radius: 5px !important;
+      background-color: rgb(0, 85, 138) !important;
+      color: #fff !important;
+      cursor: pointer !important;
+      transition: background-color 0.3s !important;
+    }
+
+    .feedback-form button[type="submit"]:hover {
+      background-color: rgb(3, 37, 59)!important;
+      transform: translateY(2px);
+    }
+
+  
+
+    .feedback-form .feed-para {
+      text-align: center;
+      font-size: 18px;
+      color: rgb(255, 251, 246);
+    }
+
+.rate-us {
+   margin-top: 13px;
+  display: block;
+  text-align: center;
+  margin-bottom: 0px;
+  color: rgb(42, 40, 40) !important;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 40px;
+  margin-bottom: 2px;
+}
+
+.rating-container button {
+  font-size: 42px;
+  border: none;
+  cursor: pointer;
+  color: rgb(231, 231, 231);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.rating-container button.filled {
+  color: rgb(255, 94, 0); 
+  transform: scale(1.2);
+}
+
+.rating-container button:hover {
+  transform: scale(1.3);
+}
+
+@media (max-width: 600px) {
+  .feedback-form h2 
+  {
+      font-size: 1.4em;
+  }
+  .rating-container button 
+  {
+      font-size: 1.5em;
+  }
+  .feedback-wrapper
+  {
+    width: 90%;
+  }
+  .rating-container
+  {
+    font-size: 30px;
+  }
+}
+
+
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.532);
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  flex-direction: column;
+}
+
+.popup-icon {
+  justify-self: center;
+  display: inline-block;
+}
+.popup-content {
+  background: linear-gradient(to bottom, #ffffff, #ffce92); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  height: 307px;
+}
+.popup-content h2 {
+  color: #d9822b;
+  font-weight: 600;
+  font-size: 19px;
+}
+.popup-content p {
+  font-size: 17px;
+  margin-bottom: 5px;
+  color: rgb(62, 62, 62);
+}
+.popup-button {
+  background-color:  rgb(0, 85, 138);
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.popup-button:hover {
+  background-color:  rgb(3, 37, 59);
+}
+  </style>
+</head>
+<body>
+
+<div class="feedback-wrapper">
+  <div class="feedback-form">
+    <h2>We'd Love Your Feedback!</h2>
+    <p class="feed-para">Let us know how we're doing and how we can improve.</p>
+    <p class="feed-para"><strong style="color: rgb(114, 48, 1);">Open Source Village</strong></p>
+    <div>
+      <p for="rating" class="rate-us">Rate Your Experience</p>
+      <div class="rating-container">
+        <button type="button" onclick="handleRatingChange(1)">☆</button>
+        <button type="button" onclick="handleRatingChange(2)">☆</button>
+        <button type="button" onclick="handleRatingChange(3)">☆</button>
+        <button type="button" onclick="handleRatingChange(4)">☆</button>
+        <button type="button" onclick="handleRatingChange(5)">☆</button>
+      </div>
+    </div>
+    <form id="feedback-form" onsubmit="handleSubmit(event)">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <label for="feedback">Your Feedback</label>
+      <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
+      <button type="submit">Submit Feedback</button>
+    </form>
   </div>
+</div>
+
+<div id="popup" class="popup" style="display: none;">
+  <div class="popup-content">
+    <h2>Thank you for your Feedback!🧡</h2>
+    <div class="popup-icon">
+      <img src="/images/GIF/Feedback giphy.gif" alt="✅" height="120" width="120">
+    </div>
+    <p>Your feedback has been received.<br> We appreciate the input you provide.</p>
+    <button class="popup-button" onclick="closePopup()">Back to Home</button>
+  </div>
+</div>
+
+<script>
+  let rating = null;
+
+  function handleRatingChange(rating) {
+  const buttons = document.querySelectorAll('.rating-container button');
+  buttons.forEach((button, index) => {
+    if (index < rating) {
+      button.classList.add('filled');
+      button.textContent = '★'; // Filled star
+    } else {
+      button.classList.remove('filled');
+      button.textContent = '☆'; // Empty star
+    }
+  });
+}
+
+  function updateStars() {
+  const buttons = document.querySelectorAll('.rating-container button');
+  buttons.forEach((button, index) => {
+    if (index < rating) {
+      button.classList.add('filled');
+    } else {
+      button.classList.remove('filled');
+    }
+  });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const feedback = document.getElementById('feedback').value;
+
+    console.log('Feedback submitted:', { name, email, rating, feedback });
+
+    document.getElementById('feedback-form').reset();
+    rating = null;
+    updateStars();
+
+    document.getElementById('popup').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+</script>
+
+
   <!-- footer section -->
   <special-footer></special-footer>
 
@@ -1159,11 +1998,7 @@
     <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
   </svg>
   </footer>
-  <script>
-    function sendFeed() {
-      alert('Email sent successfully!');
-    }
-  </script>
+
   </div>
   <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
     let circle = document.querySelector(".progress-ring__circle");
@@ -1228,6 +2063,11 @@
     sections.forEach(section => {
       observer.observe(section);
     });
+  </script>
+  <script>
+    function sendFeed() {
+      alert('Email sent successfully!');
+    }
   </script>
   <script>
     function sendEmail() {
@@ -1327,6 +2167,33 @@
     });
   </script>
 
+
+  <!-- Trail effect elements -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <script src="trail.js"></script>
+
+  <!-- end -->
 
   <script src="./footer/footer.js"></script>
 </body>

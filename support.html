@@ -1,101 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Support - Open Source Community</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <style>
-      main {
-        padding: 20px;
-        max-width: 800px;
-        margin: 20px auto;
-        background: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
 
-      section {
-        margin-bottom: 20px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support - Open Source Community</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-      form label {
-        display: block;
-        margin-top: 10px;
-      }
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("nav");
+      header.classList.toggle("sticky", window.scrollY > 50)
+    })
+  </script>
 
-      form input,
-      form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-      }
+  <style>
+    /* Back to Top Button */
+    .scrollToTopBtn {
+      /* background-color: #FFE70F; */
+      background-image: radial-gradient(#f3bf8c, #ee7f10);
+      color: #fff;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 18px;
+      text-decoration: none;
+      border: none;
+      line-height: 50px;
+      /* Center text vertically */
+      transition: background-color 0.3s ease;
+      position: fixed;
+      bottom: 106px;
+      right: 43px;
+      display: none;
+      /* Hidden by default */
+      z-index: 1000;
+      margin-bottom: 10px;
+    }
 
-      form button {
-        padding: 10px 20px;
-        background: #ff7d7d;
-        color: #fff;
-        border: none;
-        margin-top: 10px;
-        cursor: pointer;
-      }
+    .scrollToTopBtn:hover {
+      background-color: #484848;
+    }
 
-      .faq {
-        margin-bottom: 20px;
-      }
+    .progress-ring {
+      position: fixed;
+      bottom: 101px;
+      margin-bottom: 10px;
+      right: 38px;
+      transform: rotate(-90deg);
+      z-index: 999;
+      /* Just below the button */
+      margin-bottom: 10px;
+    }
 
-      .faq h2,
-      .faq p {
-        margin: 5px 0;
+    .progress-ring__circle {
+      transition: 0.35s stroke-dasharray;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+      
+  </style>
+   <link rel="stylesheet" href="support.css" />
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const faqq = document.querySelectorAll(".faqs");
+      faqq.forEach((faqs) => {
+        faqs.addEventListener("click", () => {
+          faqs.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+
+
+</head>
+
+<body>
+
+  <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+  </svg>
+  </footer>
+
+  </div>
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    window.onscroll = function () {
+      scrollFunction();
+      updateProgress();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
       }
-    </style>
-  </head>
-  <body>
-    <div class="navbar">
-      <nav>
-        <label
-          for="logo"
-          style="margin-left: 5px; display: flex; gap: 1rem; cursor: auto"
-        >
-          <img
-            src="fav.png"
-            alt="logo"
-            style="height: 50px; width: 50px; border-radius: 50%"
-          />
-          <span
-            style="
-              margin-top: 15px;
-              font-size: medium;
-              color: #fff;
-              cursor: auto;
-            "
-            >Open Source Village</span
-          >
-        </label>
-        <ul class="flex flex-col md:flex-row">
-          <li><i></i><a href="index.html">Home</a></li>
-          <li><i></i><a href="#general-info">General info</a></li>
-          <li><i></i><a href="#fav.png">FAQs</a></li>
-          <li><i></i><a href="#conatct">Contact</a></li>
-        </ul>
-      </nav>
+    }
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
+
+    scrollToTopBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      topFunction();
+    });
+  </script>
+ <!-- Navbar -->
+ <div class="navbar">
+  <nav>
+    <a class="logo-link" href="#home">
+      <div class="logo-title">
+                  <img  class="logo" src="images/logo2.jpeg" alt="logo">
+
+                  <span class="logo-text">Open Source Village</span>
+                 </div>
+
+      <!-- <div>
+        <span class="logo-subtext">Source</span>
+      </div> -->
+
+    </a>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html#home">Home</a></li>
+      <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+      <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
+      <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
+      <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+    </ul>
+
+    <div class="toggle-container" style="top: 15px;">
+      <input type="checkbox" id="checkbox" class="switch-checkbox">
+      <label class="theme-switch" for="checkbox">
+        <div class="toggle-button">
+          <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+          <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+        </div>
+      </label>
     </div>
 
-    <!-- <header>
+    <style>
+      .toggle-container {
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        right: -4px;
+        top: 15px;
+      }
+
+      .light-mode .toggle-container {
+        right: 140px;
+        top: 10px;
+      }
+      
+      /* Hidden Checkbox */
+      .switch-checkbox {
+        display: none;
+      }
+
+      .theme-switch {
+        position: relative;
+        width: 45px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon,
+      .theme-switch .dark-mode-icon {
+        font-size: 19px;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.5s ease, color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon {
+        color: #f39c12;
+      }
+
+      .theme-switch .dark-mode-icon {
+        color: #bdc3c7;
+        opacity: 0;
+      }
+
+      .toggle-button {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, background-color 0.5s ease;
+      }
+
+      /* Checkbox Checked State */
+      .switch-checkbox:checked + .theme-switch {
+        background-color: #34495e;
+      }
+
+      .switch-checkbox:checked + .theme-switch .light-mode-icon {
+        opacity: 0;
+      }
+
+      .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+        opacity: 1;
+      }
+
+      .switch-checkbox:checked + .theme-switch .toggle-button {
+        transform: translateX(13px);
+        /* background-color: #34495e; */
+      }
+
+      body.dark-mode {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .main-content{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8) !important;
+}
+body.dark-mode .main-content p{
+color: white;
+}
+body.dark-mode .main-content h1{
+color: white;
+}
+body.dark-mode .cards p{
+  color: black;
+}
+body.dark-mode .card-2{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .items {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: white;
+}
+body.dark-mode .items p{
+  color: white;
+}
+body.dark-mode .general{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode #contact-form{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .contact-form button{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+}
+body.dark-mode .contact-info{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+}
+body.dark-mode .contact-form-container{
+  background: rgba(74, 74, 87, 0.979);
+}
+body.dark-mode main h2{
+  color:white;
+}
+body.dark-mode p{
+  color: #dedbdb;
+}
+body.dark-mode .form-group label{
+  color: #dedbdb;
+}
+main h2{
+  color:black;
+}
+
+
+    </style>
+<style>
+  .contact-form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  gap: 10px;
+}
+
+.form-group input {
+  flex: 1;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+}
+
+.success-message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  display: none;
+}
+input[type="text"], input[type="email"], textarea{
+  border-radius: 5px;
+}
+  </style>
+    <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+    <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
+
+  </nav>
+</div>
+
+  <!-- <header>
       <h1>Support</h1>
       <nav>
         <ul>
@@ -106,71 +390,223 @@
       </nav>
     </header> -->
 
-    <main>
-      <section id="general-info">
-        <h2>General Information</h2>
-        <p>
-          Welcome to the support page of our open-source community. Here you
-          will find resources and contact information to help you with any
-          questions or issues you may encounter. Our support team is dedicated
-          to providing you with the assistance you need.
-        </p>
-      </section>
+  <main>
+    <section class="general" id="general-info">
+      <h2>General Information</h2>
+      <hr style="width: 70%; margin-left: 165px;">
+      <p>
+        Welcome to the support page of our open-source community. Here you
+        will find resources and contact information to help you with any
+        questions or issues you may encounter. Our support team is dedicated
+        to providing you with the assistance you need.
+      </p>
+    </section>
 
-      <section id="faqs" class="faq">
-        <h2>Frequently Asked Questions</h2>
-        <h3>How do I join the community?</h3>
-        <p>
-          You can join our community by visiting the 'Become a Member' page and
-          filling out the membership application form.
-        </p>
-        <h3>What projects can I contribute to?</h3>
-        <p>
-          We have a variety of projects in different domains such as web
-          development, data science, and machine learning in the world of open
-          source.
-        </p>
-        <h3>How can I get help with a project?</h3>
-        <p>
-          If you need help with a project, you can contact our support team
-          using the form below or participate in our community forums.
-        </p>
-      </section>
+    <section id="faq" class="faq">
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">
+          <h3>How do I join the community?</h3>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>You can join our community by visiting the 'Become a Member' page and filling out the membership application form.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">
+          <h3>What projects can I contribute to?</h3>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We have a variety of projects in different domains such as web development, data science, and machine learning in the world of open source.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">
+          <h3>How can I get help with a project?</h3>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>If you need help with a project, you can contact our support team using the form below or participate in our community forums.</p>
+        </div>
+      </div>
 
-      <section id="contact">
-        <h2>Contact Support</h2>
-        <p>
-          If you need further assistance, please fill out the form below and our
-          support team will get back to you as soon as possible:
-        </p>
-        <form id="support-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="issue">Issue:</label>
-          <textarea id="issue" name="issue" required></textarea>
-
+    </section>
+    <section class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need support, feel free to reach out to us:</p>
+  
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+  
           <button type="submit">Submit</button>
+
+      
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">
+          <h3>What are the benefits of joining the community?</h3>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>By joining our community, you gain access to a network of professionals, exclusive resources, and opportunities for collaboration and growth.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">
+          <h3>How can I stay updated with community events?</h3>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Stay updated with our community events by subscribing to our newsletter, following us on social media, and regularly checking our events page.</p>
+        </div>
+      </div>
+    </section>
+    
+    
+    <div class="contact-container">
+      <div style="background: #ff8000;" class="contact-form-container">
+        <h2 style="color: black;">Get in touch</h2>
+        <form class="contact-form" onsubmit="sendMessage(event)">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <textarea id="message" name="message" placeholder="Message" required></textarea>
+            <button type="submit" id="send-message-button">Send Message</button>
+            <div id="success-message" class="success-message"></div>
         </form>
-      </section>
-    </main>
+    </div>
+      <div class="contact-info">
+        <h2>Need Support? <br> Contact Us!</h2>
+        <p><i class="fas fa-map-marker-alt"></i> Address: 198 West 21th Street, Suite 721 New York NY 10016</p>
+        <p><i class="fas fa-phone"></i> Phone: + 1235 2355 98</p>
+        <p><i class="fas fa-envelope"></i> Email: info@yoursite.com</p>
+        <p><i class="fas fa-globe"></i> Website: yoursite.com</p>
+      </div>
+    </div>
 
-    <special-footer></special-footer>
+ 
+  </main>
 
-    <script>
-      document
-        .getElementById("support-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          alert(
-            "Thank you for reaching out. Our support team will get back to you soon."
-          );
-          document.getElementById("support-form").reset();
-        });
-    </script>
-    <script src="footer/footer.js"></script>
-  </body>
+  <special-footer></special-footer>
+    
+  <script>
+   function toggleAnswer(element) {
+  const faqItem = element.parentElement;
+  const answer = faqItem.querySelector('.faq-answer');
+  const icon = element.querySelector('i');
+
+  const allFaqItems = document.querySelectorAll('.faq-item');
+  const allAnswers = document.querySelectorAll('.faq-answer');
+  const allIcons = document.querySelectorAll('.faq-question i');
+
+  // Close all answers and reset icons
+  allAnswers.forEach(ans => {
+    ans.classList.remove('show');
+    ans.style.maxHeight = null;
+  });
+  allIcons.forEach(icn => {
+    icn.classList.remove('fa-chevron-up');
+    icn.classList.add('fa-chevron-down');
+  });
+  allFaqItems.forEach(item => item.querySelector('.faq-question').classList.remove('active'));
+
+  // Open the clicked answer if it was closed
+  if (!answer.classList.contains('show')) {
+    answer.classList.add('show');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+    icon.classList.remove('fa-chevron-down');
+    icon.classList.add('fa-chevron-up');
+    element.classList.add('active');
+  }
+}
+
+  </script>
+  <script>
+    document
+      .getElementById("support-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert(
+          "Thank you for reaching out. Our support team will get back to you soon."
+        );
+        document.getElementById("support-form").reset();
+      });
+  </script>
+  <script src="footer/footer.js"></script>
+  <script src="trail.js"></script>
+
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Open Source Village",
+      "botConversationDescription": "Ask me anything!",
+      "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+      "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "Open Source Village",
+      "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": [],
+      "enableConversationDeletion": true
+    });
+  </script>
+
+  <script>
+
+    document.documentElement.style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButton = document.getElementById('checkbox');
+      const currentMode = localStorage.getItem('dark-mode');
+      if (currentMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+        toggleButton.checked = true;
+      }
+
+      toggleButton.addEventListener('change', function () {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+          localStorage.setItem('dark-mode', 'enabled');
+        }
+        else {
+          localStorage.setItem('dark-mode', 'disabled');
+        }
+      });
+    });
+  </script>
+
+
+
+</body>
+
 </html>
